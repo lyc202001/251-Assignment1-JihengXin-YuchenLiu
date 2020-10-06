@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.1.3" sequence="0" timestamp="1601957421881" analysisTimestamp="1601957419998" release="">
+  <Project projectName="251-Assignment1-JihengXin-YuchenLiu[251-Assignment1-JihengXin-YuchenLiu]">
+    <Jar>E:\159251\251-Assignment1-JihengXin-YuchenLiu\out\production\251-Assignment1-JihengXin-YuchenLiu\Assignment1$MyActionListener1.class</Jar>
+    <Jar>E:\159251\251-Assignment1-JihengXin-YuchenLiu\out\production\251-Assignment1-JihengXin-YuchenLiu\Assignment1.class</Jar>
+    <Jar>E:\159251\251-Assignment1-JihengXin-YuchenLiu\out\production\251-Assignment1-JihengXin-YuchenLiu\Change$MyActionListener3.class</Jar>
+    <Jar>E:\159251\251-Assignment1-JihengXin-YuchenLiu\out\production\251-Assignment1-JihengXin-YuchenLiu\Change.class</Jar>
+    <Jar>E:\159251\251-Assignment1-JihengXin-YuchenLiu\out\production\251-Assignment1-JihengXin-YuchenLiu\Colorchange.class</Jar>
+    <Jar>E:\159251\251-Assignment1-JihengXin-YuchenLiu\out\production\251-Assignment1-JihengXin-YuchenLiu\Search$MyActionListener2.class</Jar>
+    <Jar>E:\159251\251-Assignment1-JihengXin-YuchenLiu\out\production\251-Assignment1-JihengXin-YuchenLiu\Search.class</Jar>
+    <AuxClasspathEntry>E:/159251/251-Assignment1-JihengXin-YuchenLiu/out/production/251-Assignment1-JihengXin-YuchenLiu</AuxClasspathEntry>
+    <SrcDir>E:/159251/251-Assignment1-JihengXin-YuchenLiu/数据库大作业/src</SrcDir>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" instanceHash="2d7dcab5db487edc6f4dfb9a1133ce04" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to df in Assignment1.display(DocumentEvent)</LongMessage>
+    <Class classname="Assignment1" primary="true">
+      <SourceLine classname="Assignment1" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+        <Message>In Assignment1.java</Message>
+      </SourceLine>
+      <Message>In class Assignment1</Message>
+    </Class>
+    <Method classname="Assignment1" name="display" signature="(Ljavax/swing/event/DocumentEvent;)V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment1" start="71" end="72" startBytecode="0" endBytecode="5" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java"/>
+      <Message>In method Assignment1.display(DocumentEvent)</Message>
+    </Method>
+    <LocalVariable name="df" register="2" pc="10" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named df</Message>
+    </LocalVariable>
+    <SourceLine classname="Assignment1" primary="true" start="71" end="71" startBytecode="9" endBytecode="9" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+      <Message>At Assignment1.java:[line 71]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment1" primary="true" start="71" end="71" startBytecode="9" endBytecode="9" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+      <Message>At Assignment1.java:[line 71]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="df"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="88cbf00de9ef3a81b6b764beb153f22c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in Assignment1.open(): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="Assignment1" primary="true">
+      <SourceLine classname="Assignment1" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+        <Message>In Assignment1.java</Message>
+      </SourceLine>
+      <Message>In class Assignment1</Message>
+    </Class>
+    <Method classname="Assignment1" name="open" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment1" start="74" end="108" startBytecode="0" endBytecode="512" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java"/>
+      <Message>In method Assignment1.open()</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="146" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="Assignment1" primary="true" start="85" end="85" startBytecode="65" endBytecode="65" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+      <Message>At Assignment1.java:[line 85]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment1" primary="true" start="85" end="85" startBytecode="65" endBytecode="65" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+      <Message>At Assignment1.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="f4c47d96cf32c6c08d5ff58b39160ac6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in Assignment1.save(): new java.io.OutputStreamWriter(OutputStream)</LongMessage>
+    <Class classname="Assignment1" primary="true">
+      <SourceLine classname="Assignment1" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+        <Message>In Assignment1.java</Message>
+      </SourceLine>
+      <Message>In class Assignment1</Message>
+    </Class>
+    <Method classname="Assignment1" name="save" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment1" start="111" end="133" startBytecode="0" endBytecode="344" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java"/>
+      <Message>In method Assignment1.save()</Message>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="108" end="114" startBytecode="0" endBytecode="146" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+      <Message>Called method new java.io.OutputStreamWriter(OutputStream)</Message>
+    </Method>
+    <SourceLine classname="Assignment1" primary="true" start="116" end="116" startBytecode="57" endBytecode="57" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+      <Message>At Assignment1.java:[line 116]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment1" primary="true" start="116" end="116" startBytecode="57" endBytecode="57" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+      <Message>At Assignment1.java:[line 116]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" rank="11" abbrev="NP" category="CORRECTNESS" instanceHash="48f9b8af48728c56070e3f3868f58950" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference in method on exception path</ShortMessage>
+    <LongMessage>Possible null pointer dereference of out in Assignment1.save() on exception path</LongMessage>
+    <Class classname="Assignment1" primary="true">
+      <SourceLine classname="Assignment1" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+        <Message>In Assignment1.java</Message>
+      </SourceLine>
+      <Message>In class Assignment1</Message>
+    </Class>
+    <Method classname="Assignment1" name="save" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment1" start="111" end="133" startBytecode="0" endBytecode="344" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java"/>
+      <Message>In method Assignment1.save()</Message>
+    </Method>
+    <LocalVariable name="out" register="2" pc="61" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from out</Message>
+    </LocalVariable>
+    <SourceLine classname="Assignment1" primary="true" start="127" end="127" startBytecode="94" endBytecode="94" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at Assignment1.java:[line 127]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment1" start="114" end="114" startBytecode="31" endBytecode="31" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java" role="SOURCE_LINE_NULL_VALUE">
+      <Message>Null value at Assignment1.java:[line 114]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment1" start="117" end="117" startBytecode="64" endBytecode="64" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at Assignment1.java:[line 117]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment1" start="118" end="118" startBytecode="66" endBytecode="66" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at Assignment1.java:[line 118]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_PARAM_DEREF" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="5576677239118c654f3bfba899db5339" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Method call passes null for non-null parameter</ShortMessage>
+    <LongMessage>Null passed for non-null parameter of new java.io.InputStreamReader(InputStream) in Assignment1.open()</LongMessage>
+    <Class classname="Assignment1" primary="true">
+      <SourceLine classname="Assignment1" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+        <Message>In Assignment1.java</Message>
+      </SourceLine>
+      <Message>In class Assignment1</Message>
+    </Class>
+    <Method classname="Assignment1" name="open" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment1" start="74" end="108" startBytecode="0" endBytecode="512" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java"/>
+      <Message>In method Assignment1.open()</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="146" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <Int value="1" role="INT_MAYBE_NULL_ARG">
+      <Message>Argument 1 might be null but must not be null</Message>
+    </Int>
+    <LocalVariable name="file" register="4" pc="54" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from file</Message>
+    </LocalVariable>
+    <SourceLine classname="Assignment1" primary="true" start="85" end="85" startBytecode="65" endBytecode="65" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java" role="SOURCE_LINE_INVOKED">
+      <Message>Method invoked at Assignment1.java:[line 85]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment1" start="79" end="79" startBytecode="35" endBytecode="35" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java" role="SOURCE_LINE_NULL_VALUE">
+      <Message>Null value at Assignment1.java:[line 79]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment1" start="82" end="82" startBytecode="57" endBytecode="57" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at Assignment1.java:[line 82]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" rank="16" abbrev="OS" category="BAD_PRACTICE" instanceHash="1153aece6a73069f5eec0d573a2d170c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to close stream</ShortMessage>
+    <LongMessage>Assignment1.open() may fail to close stream</LongMessage>
+    <Class classname="Assignment1" primary="true">
+      <SourceLine classname="Assignment1" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+        <Message>In Assignment1.java</Message>
+      </SourceLine>
+      <Message>In class Assignment1</Message>
+    </Class>
+    <Method classname="Assignment1" name="open" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment1" start="74" end="108" startBytecode="0" endBytecode="70" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java"/>
+      <Message>In method Assignment1.open()</Message>
+    </Method>
+    <Type descriptor="Ljava/io/Reader;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.Reader" start="81" end="388" sourcefile="Reader.java" sourcepath="java/io/Reader.java">
+        <Message>At Reader.java:[lines 81-388]</Message>
+      </SourceLine>
+      <Message>Need to close java.io.Reader </Message>
+    </Type>
+    <SourceLine classname="Assignment1" primary="true" start="86" end="86" startBytecode="70" endBytecode="70" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+      <Message>At Assignment1.java:[line 86]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment1" primary="true" start="86" end="86" startBytecode="70" endBytecode="70" sourcefile="Assignment1.java" sourcepath="Assignment1.java" relSourcepath="Assignment1.java">
+      <Message>At Assignment1.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_PARAM_DEREF" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Method call passes null for non-null parameter</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      This method call passes a null value for a non-null method parameter.
+    Either the parameter is annotated as a parameter that should
+    always be non-null, or analysis has shown that it will always be
+    dereferenced.
+      </p>
+      
+   ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion, and will assume that the default platform encoding is suitable. This will cause the application behaviour to vary between platforms. Use an alternative API and specify a charset name or Charset object explicitly.  </p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_ON_SOME_PATH_EXCEPTION" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Possible null pointer dereference in method on exception path</ShortDescription>
+    <Details><![CDATA[
+
+<p> A reference value which is null on some exception control path is
+dereferenced here.&nbsp; This may lead to a <code>NullPointerException</code>
+when the code is executed.&nbsp;
+Note that because SpotBugs currently does not prune infeasible exception paths,
+this may be a false warning.</p>
+
+<p> Also note that SpotBugs considers the default case of a switch statement to
+be an exception path, since the default case is often infeasible.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="OS_OPEN_STREAM" abbrev="OS" category="BAD_PRACTICE">
+    <ShortDescription>Method may fail to close stream</ShortDescription>
+    <Details><![CDATA[
+
+<p> The method creates an IO stream object, does not assign it to any
+fields, pass it to other methods that might close it,
+or return it, and does not appear to close
+the stream on all paths out of the method.&nbsp; This may result in
+a file descriptor leak.&nbsp; It is generally a good
+idea to use a <code>finally</code> block to ensure that streams are
+closed.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="OS">
+    <Description>Stream not closed on all paths</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 5 Oct 2020 22:27:53 +0800" total_classes="7" referenced_classes="326" total_bugs="6" total_size="273" num_packages="1" java_version="11.0.8" vm_version="11.0.8+10-b944.31" cpu_seconds="11.70" clock_seconds="29.69" peak_mbytes="1642.37" alloc_mbytes="974.44" gc_seconds="0.05" priority_2="3" priority_1="3">
+    <FileStats path="Assignment1.java" bugCount="6" size="173" bugHash="1c060dc7f6fbd67decce30e171bb59fd"/>
+    <FileStats path="Change.java" bugCount="0" size="69"/>
+    <FileStats path="Colorchange.java" bugCount="0" size="3"/>
+    <FileStats path="Search.java" bugCount="0" size="28"/>
+    <PackageStats package="" total_bugs="6" total_types="7" total_size="273" priority_2="3" priority_1="3">
+      <ClassStats class="Assignment1" sourceFile="Assignment1.java" interface="false" size="146" bugs="6" priority_2="3" priority_1="3"/>
+      <ClassStats class="Assignment1$MyActionListener1" sourceFile="Assignment1.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="Change" sourceFile="Change.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="Change$MyActionListener3" sourceFile="Change.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="Colorchange" sourceFile="Colorchange.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="Search" sourceFile="Search.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="Search$MyActionListener2" sourceFile="Search.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="491" invocations="1676" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="17840" standardDeviationMicrosecondsPerInvocation="1209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="433" invocations="1673" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="19811" standardDeviationMicrosecondsPerInvocation="794"/>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="241" invocations="2" avgMicrosecondsPerInvocation="120761" maxMicrosecondsPerInvocation="193463" standardDeviationMicrosecondsPerInvocation="72702"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="156" invocations="326" avgMicrosecondsPerInvocation="479" maxMicrosecondsPerInvocation="23917" standardDeviationMicrosecondsPerInvocation="1574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="128" invocations="326" avgMicrosecondsPerInvocation="393" maxMicrosecondsPerInvocation="6908" standardDeviationMicrosecondsPerInvocation="745"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
