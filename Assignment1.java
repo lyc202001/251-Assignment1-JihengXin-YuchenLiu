@@ -175,7 +175,7 @@ public class Assignment1 extends JFrame implements DocumentListener {
     String [] str3={"About"};
     Search d1=new Search();
     Change c1=new Change();
-    Colorchange C1=new Colorchange();
+
 
     int flag=0;
     String source="";
@@ -330,6 +330,7 @@ public class Assignment1 extends JFrame implements DocumentListener {
             }
         }
     }
+
 
 
     void about(){
