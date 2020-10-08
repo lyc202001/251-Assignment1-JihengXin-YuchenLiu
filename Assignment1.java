@@ -10,6 +10,8 @@ import java.awt.*;
 import java.io.*;
 import java.awt.event.*;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+
 class MyEditorKit extends DefaultEditorKit
 {
     public MyEditorKit(){
@@ -161,6 +163,7 @@ class KeyWord
 public class Assignment1 extends JFrame implements DocumentListener {
 
     private static final long serialVersionUID = 1L;
+    JTextField content= new JTextField();
     JMenuBar menubar=new JMenuBar();
     JMenu file=new JMenu("File");
     JMenu edit=new JMenu("edit");
@@ -349,7 +352,42 @@ public class Assignment1 extends JFrame implements DocumentListener {
                     wordarea.paste();
                 }
                 if(e.getActionCommand()=="Search"){
-                    d1.setVisible(true);
+                    JFrame frame = new JFrame("file name");
+                    frame.setVisible(true);
+                    frame.setLocation(200, 200);
+                    frame.setSize(300,100);
+                    frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+                    JLabel label = new JLabel("content");
+                    content.setBounds(90, 20, 80, 30);
+                    frame.add(content);
+                    frame.add(label);
+
+                    content.addActionListener(new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            String keyword=content.getText();
+                            String textInText = wordarea.getText();
+                            int index = textInText.indexOf(keyword);
+                            if (index != -1) {
+                                wordarea.getHighlighter().removeAllHighlights();
+                                try {
+                                    ArrayList<ArrayList<Integer>> indexList= new ArrayList<ArrayList<Integer>>();
+                                    indexList=Search.search(textInText,keyword);
+                                    int i=0;
+                                    while (i<indexList.size()) {
+                                        wordarea.getHighlighter().addHighlight(indexList.get(i).get(0), indexList.get(i).get(1),DefaultHighlighter.DefaultPainter);
+                                        i+=1;
+                                    }
+                                } catch (BadLocationException e1) {
+
+                                    e1.printStackTrace();
+                                }
+                            }
+                            else {
+                                JOptionPane.showMessageDialog(null,"Can't find keyword:" + keyword);
+                            }
+                        }
+                    });
                 }
                 if(e.getActionCommand()=="Open"){
                     open();
