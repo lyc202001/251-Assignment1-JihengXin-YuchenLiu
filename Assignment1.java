@@ -1,5 +1,11 @@
-package main;
+package guavaExamples;
 
+
+
+import com.alibaba.fastjson.JSONObject;
+import org.w3c.dom.ls.LSOutput;
+
+import javax.servlet.ServletException;
 import javax.swing.*;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
@@ -29,7 +35,7 @@ class MyViewFactory implements ViewFactory
     }
 
     public View create(Element element){
-        return new Colorchange.MyEditorView(element);
+        return new MyEditorView(element);
     }
 }
 
@@ -52,7 +58,7 @@ class MyEditorView extends PlainView
                 index=i;
                 while(++i<count&&Character.isLetter(segment.array[segment.offset+i]));
                 doc.getText(p0+index, (i--)-index, token);
-                if(Colorchange.KeyWord.isKeyWord(token)){
+                if(KeyWord.isKeyWord(token)){
                     g.setFont(KEYWORDFONT);
                     g.setColor(KEYWORDCOLOR);
                 }else{
@@ -115,7 +121,7 @@ class MyEditorView extends PlainView
     public static Font KEYWORDFONT=new Font(TEXTFONT.getFontName(), Font.BOLD, TEXTFONT.getSize());
     public static Color KEYWORDCOLOR=new Color(0, 0, 128);
     public static Font  COMMENTFONT=TEXTFONT;
-    public static Color COMMENTCOLOR=new Color(192, 192, 192);
+    public static Color COMMENTCOLOR=new Color(187, 29, 160);
     public static Font STRINGFONT=TEXTFONT;
     public static Color STRINGCOLOR=new Color(38, 255, 0);
 }
@@ -163,11 +169,10 @@ class KeyWord
 public class Assignment1 extends JFrame implements DocumentListener {
 
     private static final long serialVersionUID = 1L;
-    JTextField content= new JTextField();
+    JTextField content=new JTextField();
     JMenuBar menubar=new JMenuBar();
     JMenu file=new JMenu("File");
     JMenu edit=new JMenu("edit");
-    JMenu look =new JMenu("Search");
     JMenu view=new JMenu("View");
     JMenu help =new JMenu("Help");
     MyEditorKit  kit=new MyEditorKit();
@@ -176,19 +181,23 @@ public class Assignment1 extends JFrame implements DocumentListener {
     String [] str1={"New","Open","Save","Print","Exit"};
     String [] str2={"Cut","Copy","Paste","Search","Cut(SCPC)","T&D"};
     String [] str3={"About"};
-    Search d1=new Search();
-    Change c1=new Change();
+    String name1=JsonServerlst.service();
+    String name2=JsonServerlst.NAME1();
+    String num1=JsonServerlst.number1();
+    String num2=JsonServerlst.number2();
+
+
+
 
 
     int flag=0;
     String source="";
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ServletException, IOException {
         JFrame Assignmet1=new Assignment1();
         Assignmet1.setVisible(true);
+
     }
-    public Assignment1(){
-
-
+    public Assignment1() throws ServletException, IOException {
         setTitle("Test Editor");
         Toolkit kit = Toolkit.getDefaultToolkit();
         Dimension screenSize = kit.getScreenSize();
@@ -197,7 +206,6 @@ public class Assignment1 extends JFrame implements DocumentListener {
         add(imgScrollPane,BorderLayout.CENTER);
         setJMenuBar(menubar);
         menubar.add(file);
-        menubar.add(look);
         menubar.add(view);
         menubar.add(help);
         menubar.add(edit);
@@ -337,7 +345,7 @@ public class Assignment1 extends JFrame implements DocumentListener {
 
 
     void about(){
-        JOptionPane.showMessageDialog(null,"The Test Editor is made by JihengXin and YuchenLiu");
+        JOptionPane.showMessageDialog(null,"The Test Editor is made by" +name1+" and"+ name2);
     }
     class MyActionListener1 implements ActionListener{
         public void actionPerformed(ActionEvent e) {
@@ -352,14 +360,14 @@ public class Assignment1 extends JFrame implements DocumentListener {
                     wordarea.paste();
                 }
                 if(e.getActionCommand()=="Search"){
-                    JFrame frame = new JFrame("file name");
+                    JFrame frame = new JFrame("Search diagram");
                     frame.setVisible(true);
-                    frame.setLocation(200, 200);
+                    frame.setLocation(270, 200);
                     frame.setSize(300,100);
                     frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-                    JLabel label = new JLabel("content");
-                    content.setBounds(90, 20, 80, 30);
+                    JLabel label = new JLabel("Search content");
+                    content.setBounds(90, 20, 180, 30);
                     frame.add(content);
                     frame.add(label);
 
@@ -388,6 +396,7 @@ public class Assignment1 extends JFrame implements DocumentListener {
                             }
                         }
                     });
+
                 }
                 if(e.getActionCommand()=="Open"){
                     open();
